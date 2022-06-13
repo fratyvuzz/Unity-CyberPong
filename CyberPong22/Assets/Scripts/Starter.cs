@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Starter : MonoBehaviour
+{
+
+    private GameController gameController;
+    private Animator animator;
+
+    void Start()
+    {
+        gameController = FindObjectOfType<GameController>();
+        animator = GetComponent<Animator>();
+    }
+
+    
+    void Update()
+    {
+        
+    }
+
+    public void StartCountdown()
+    {
+        animator.SetTrigger("StartCountdown");
+    }
+
+    public void StartGame()
+    {
+        gameController.StartGame();
+    }
+}
